@@ -1,0 +1,29 @@
+<template>
+  <h1>app...</h1>
+  <h1>{{ store.state.count }}</h1>
+  <button @click="handleAdd">+</button>
+  <button @click="handleAddAsnc">+handleAddAsnc</button>
+  <HelloWorld />
+</template>
+
+<script setup>
+// import { useStore } from 'vuex';
+import { inject } from 'vue'
+import { useStore } from './vuex';
+import HelloWorld from './components/HelloWorld.vue';
+
+const store = useStore()
+
+const handleAdd = () => {
+  store.commit('add', 10)
+}
+const key = inject('key')
+
+console.log(key)
+
+const handleAddAsnc = () => {
+  store.dispatch('asyncAdd', 20)
+}
+
+
+</script>
