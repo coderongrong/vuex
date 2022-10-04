@@ -17,7 +17,7 @@ class Store {
             this.mutations[type](store.state, data)
         }
         store.dispatch = (type, data) => {
-            this.actions[type]({commit: store.commit, state: store.state},data)
+            this.actions[type]({commit: store.commit, state: store.state}, data)
         }
         app.provide('store', store)
     }
