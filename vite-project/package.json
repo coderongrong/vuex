@@ -2,15 +2,17 @@
   "name": "vite-project",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --config vite.config.js",
     "build": "vite build"
   },
   "dependencies": {
+    "@vue/cli": "^5.0.8",
     "vue": "^3.0.4",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "vite": "^1.0.0-rc.13",
-    "@vue/compiler-sfc": "^3.0.4"
+    "@vitejs/plugin-legacy": "^2.2.0",
+    "@vue/compiler-sfc": "^3.0.4",
+    "vite": "^1.0.0-rc.13"
   }
 }
